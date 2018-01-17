@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fzaibon%2Fpy-abci.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fzaibon%2Fpy-abci?ref=badge_shield)
+
 .. image:: https://travis-ci.org/davebryson/py-abci.svg?branch=master
   :target: https://https://travis-ci.org/davebryson/py-abci
 
@@ -36,3 +38,7 @@ Getting Started
 
 See the example app ``counter.py`` application under the ``examples`` directory
 here: https://github.com/davebryson/py-abci/blob/master/examples/counter.py
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fzaibon%2Fpy-abci.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fzaibon%2Fpy-abci?ref=badge_large)
