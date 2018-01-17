@@ -2,8 +2,10 @@ from .messages import *
 from .types_pb2 import *
 from .utils import str_to_bytes
 
+
 class Result(object):
     """Return object for certain abci calls"""
+
     def __init__(self, code=OK, data=b'', log=''):
         self.code = code
         self.data = str_to_bytes(data)
@@ -15,7 +17,7 @@ class Result(object):
         return cls(OK, data, log)
 
     @classmethod
-    def error(cls, code=InternalError, data=b'',log=''):
+    def error(cls, code=InternalError, data=b'', log=''):
         data = str_to_bytes(data)
         return cls(code, data, log)
 
@@ -28,10 +30,12 @@ class Result(object):
     def str(self):
         return "ABCI[code:{}, data:{}, log:{}]".format(self.code, self.data, self.log)
 
+
 class BaseApplication(object):
     """
     Base ABCI Application. Extend this and override what's needed for your app
     """
+
     def init_chain(self, reqInitChain):
         """Called only once when blockheight == 0"""
         pass
@@ -48,7 +52,7 @@ class BaseApplication(object):
 
     def set_option(self, k, v):
         """Can be used to set key value pairs in storage.  Not always used"""
-        return 'key: {} value: {}'.format(k,v)
+        return 'key: {} value: {}'.format(k, v)
 
     def deliver_tx(self, tx):
         """Called to calculate state on a given block during the consensus process"""
